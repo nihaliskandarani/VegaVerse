@@ -1,61 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VegaVerse - Your Universe of Fresh Groceries</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VegaVerse - Your Universe of Fresh Groceries</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand" href="#">VegaVerse</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon" style="color: white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <span class="cart-icon">&#128722;</span>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">VegaVerse</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon" style="color:white;"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto align-items-center">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-        
-      </ul>
-    </div>
-    <span class="cart-icon">&#128722;</span>
-  </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg"></div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-
-    <div class="hero-content">
-      <div class="hero-panel">
-    
-
-        <h1 class="glow-text">Welcome to VegaVerse</h1>
-        <p class="glow-subtitle">Your universe of fresh groceries, out-of-this-world quality</p>
-        <div class="hero-buttons">
-          <a href="#shop" class="btn btn-glow">Shop Now</a>
-          <a href="#specials" class="btn btn-glow">Daily Specials</a>
+      <div class="hero-content">
+        <div class="hero-panel">
+          <h1 class="glow-text">Welcome to VegaVerse</h1>
+          <p class="glow-subtitle">
+            Your universe of fresh groceries, out-of-this-world quality
+          </p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-glow">Shop Now</a>
+            <a href="#specials" class="btn btn-glow">Daily Specials</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Auto Carousel Section -->
+    <section id="product-carousel" class="py-5 mt-5">
+      <div class="container">
+        <h2 class="section-title">Our Featured Products</h2>
+
+        <!-- Carousel container -->
+        <div class="carousel-container position-relative overflow-hidden">
+          <!-- Previous Button -->
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <!-- Slider -->
+          <div id="slider" class="d-flex transition-all mt-5 mb-5">
+            <!-- Product Card 1 -->
+            <div
+              class="product-card"
+              data-id="p1"
+              data-name="Fresh Apples"
+              data-price="5.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/apple.avif"
+                class="product-img img-fluid"
+                alt="Fresh Apples"
+              />
+              <h5 class="product-title">Fresh Apples</h5>
+              <p class="product-price">$5.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div
+              class="product-card"
+              data-id="p2"
+              data-name="Organic Carrots"
+              data-price="3.49"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/carrot.jpg"
+                class="product-img img-fluid"
+                alt="Organic Carrots"
+              />
+              <h5 class="product-title">Organic Carrots</h5>
+              <p class="product-price">$3.49</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div
+              class="product-card"
+              data-id="p3"
+              data-name="Bananas"
+              data-price="2.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/banana.avif"
+                class="product-img img-fluid"
+                alt="Bananas"
+              />
+              <h5 class="product-title">Bananas</h5>
+              <p class="product-price">$2.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div
+              class="product-card"
+              data-id="p4"
+              data-name="Strawberries"
+              data-price="6.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/strawb.avif"
+                class="product-img img-fluid"
+                alt="Strawberries"
+              />
+              <h5 class="product-title">Strawberries</h5>
+              <p class="product-price">$6.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div
+              class="product-card"
+              data-id="p5"
+              data-name="Broccoli"
+              data-price="4.49"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/broccoli-head-is-shown-black-background_858664-23668.jpg"
+                class="product-img img-fluid"
+                alt="Broccoli"
+              />
+              <h5 class="product-title">Broccoli</h5>
+              <p class="product-price">$4.49</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div
+              class="product-card"
+              data-id="p6"
+              data-name="Blueberries"
+              data-price="7.49"
+              data-type="fruit"
+            >
+              <img
+                src="./images/blueberry.avif"
+                class="product-img img-fluid"
+                alt="Blueberries"
+              />
+              <h5 class="product-title">Blueberries</h5>
+              <p class="product-price">$7.49</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div
+              class="product-card"
+              data-id="p7"
+              data-name="Spinach"
+              data-price="3.99"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/spinach.jpg"
+                class="product-img img-fluid"
+                alt="Spinach"
+              />
+              <h5 class="product-title">Spinach</h5>
+              <p class="product-price">$3.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div
+              class="product-card"
+              data-id="p8"
+              data-name="Tomatoes"
+              data-price="4.59"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/tomat.avif"
+                class="product-img img-fluid"
+                alt="Tomatoes"
+              />
+              <h5 class="product-title">Tomatoes</h5>
+              <p class="product-price">$4.59</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div
+              class="product-card"
+              data-id="p9"
+              data-name="Mangoes"
+              data-price="6.29"
+              data-type="fruit"
+            >
+              <img
+                src="./images/mango.jpg"
+                class="product-img img-fluid"
+                alt="Mangoes"
+              />
+              <h5 class="product-title">Mangoes</h5>
+              <p class="product-price">$6.29</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div
+              class="product-card"
+              data-id="p10"
+              data-name="Bell Peppers"
+              data-price="5.79"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/bellp.avif"
+                class="product-img img-fluid"
+                alt="Bell Peppers"
+              />
+              <h5 class="product-title">Bell Peppers</h5>
+              <p class="product-price">$5.79</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <!-- DUPLICATES FOR LOOP -->
+
+            <div
+              class="product-card"
+              data-id="p1"
+              data-name="Fresh Apples"
+              data-price="5.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/apple.avif"
+                class="product-img img-fluid"
+                alt="Fresh Apples"
+              />
+              <h5 class="product-title">Fresh Apples</h5>
+              <p class="product-price">$5.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="p2"
+              data-name="Organic Carrots"
+              data-price="3.49"
+              data-type="vegetable"
+            >
+              <img
+                src="./images/carrot.jpg"
+                class="product-img img-fluid"
+                alt="Organic Carrots"
+              />
+              <h5 class="product-title">Organic Carrots</h5>
+              <p class="product-price">$3.49</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="p3"
+              data-name="Bananas"
+              data-price="2.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/banana.avif"
+                class="product-img img-fluid"
+                alt="Bananas"
+              />
+              <h5 class="product-title">Bananas</h5>
+              <p class="product-price">$2.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="p4"
+              data-name="Strawberries"
+              data-price="6.99"
+              data-type="fruit"
+            >
+              <img
+                src="./images/strawb.avif"
+                class="product-img img-fluid"
+                alt="Strawberries"
+              />
+              <h5 class="product-title">Strawberries</h5>
+              <p class="product-price">$6.99</p>
+              <button class="btn btn-glow add-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+          <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 3 -->
+   
+
+    <script>
+      // carousel
+      const slider = document.getElementById("slider");
+      const carouselContainer = slider.closest(".carousel-container");
+      let scrollPos = 0;
+      const speed = 1; // pixels per frame
+      let stepId;
+
+      // Smooth auto-scroll function
+      function step() {
+        scrollPos += speed;
+
+        // Loop back to start
+        if (scrollPos >= slider.scrollWidth - carouselContainer.clientWidth) {
+          scrollPos = 0;
+        }
+
+        slider.style.transform = `translateX(-${scrollPos}px)`;
+        stepId = requestAnimationFrame(step);
+      }
+
+      // Pause on hover
+      carouselContainer.addEventListener("mouseenter", () => {
+        cancelAnimationFrame(stepId);
+      });
+      carouselContainer.addEventListener("mouseleave", () => {
+        stepId = requestAnimationFrame(step);
+      });
+
+      // Next/Prev buttons
+      document.querySelector(".next-btn").addEventListener("click", () => {
+        // move 1 card width instantly
+        scrollPos +=
+          slider.children[0].offsetWidth +
+          parseInt(getComputedStyle(slider).gap);
+        if (scrollPos >= slider.scrollWidth - carouselContainer.clientWidth)
+          scrollPos = 0;
+        slider.style.transform = `translateX(-${scrollPos}px)`;
+      });
+
+      document.querySelector(".prev-btn").addEventListener("click", () => {
+        scrollPos -=
+          slider.children[0].offsetWidth +
+          parseInt(getComputedStyle(slider).gap);
+        if (scrollPos < 0)
+          scrollPos = slider.scrollWidth - carouselContainer.clientWidth;
+        slider.style.transform = `translateX(-${scrollPos}px)`;
+      });
+
+      // Start smooth scrolling
+      stepId = requestAnimationFrame(step);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
-
-
-
-
